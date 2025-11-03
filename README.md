@@ -1,6 +1,6 @@
 # 🏥 Voll.med API
 
-API REST desenvolvida em **Java com Spring Boot**, baseada no projeto do curso da **Alura**, para o gerenciamento de médicos, pacientes e consultas de uma clínica fictícia.  
+API REST desenvolvida em **Java com Spring Boot***, para o gerenciamento de médicos, pacientes e consultas de uma clínica fictícia.  
 O objetivo é aplicar boas práticas de arquitetura, validação, persistência e versionamento de APIs modernas.
 
 ---
