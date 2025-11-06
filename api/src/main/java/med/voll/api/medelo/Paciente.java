@@ -1,15 +1,14 @@
-package med.voll.api.paciente;
+package med.voll.api.medelo;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.endereco.Endereco;
-import med.voll.api.medico.DadosCadastroMedico;
+import med.voll.api.DTO.DadosCadastroPaciente;
 
 @Table(name = "Pacientes")
-@Entity(name = "Pacientes")
+@Entity(name = "pacientes")
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
@@ -27,6 +26,8 @@ public class Paciente {
     @Enumerated
     private Endereco endereco;
 
+    private boolean ativo;
+
     public Paciente(DadosCadastroPaciente dados) {
 
         this.nome = dados.nome();
@@ -36,4 +37,7 @@ public class Paciente {
         this.endereco = new Endereco(dados.endereco());
     }
 
+    public void excluir() {
+        this.ativo = false;
+    }
 }
